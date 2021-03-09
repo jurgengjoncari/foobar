@@ -1,14 +1,20 @@
 from itertools import combinations
 from math import sqrt
 
+staircase = []
+
 def solution(n):
-    staircase = []
-    m = 1 + int(sqrt(n - 1))
-    for r in range(1, m + 1):
-        b = combinations(range(n - 1, 0, -1), r)
-        for steps in b:
+    max_width = int(sqrt(n - 1)) + 1
+    heights = range(1, n)
+    # print(m)
+    for width in range(2, max_width + 1):       
+        stair = combinations(heights, width)
+        for steps in stair:
+            # print(steps)
+            if sum(steps) > n:
+                continue
             if sum(steps) == n:
-                staircase.append(steps)
+                  staircase.append(steps)
     return len(staircase)
 
 solution(10)

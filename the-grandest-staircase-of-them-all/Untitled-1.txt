@@ -1,0 +1,23 @@
+olemove 1 by 1 from the fist stair and add it to the next
+        # 
+        
+        # Each type of staircase should consist of 2 or more steps
+        # each step must be lower than the previous one
+        for step in steps:
+            for bricks in range(step/2):
+                step -= bricks
+                steps[1] += i
+            # meaning that you can remove only half - 1(2) from the current step and 
+            # if there's no next step, create it
+                # add it to the next step
+        
+        # A step's height is classified as the total amount of bricks that make up that step.
+        
+        
+        # iterate over every step
+            # iterate over every brick of the upper half
+                # remove that brick from the current step
+                # add that number to a new list
+                # if there is no other step next, 
+                    # create it
+                # in the next step add 1 brick
